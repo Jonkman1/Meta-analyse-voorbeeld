@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Annemarije_analyse</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Annemarije_analyse_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Annemarije_analyse_files/libs/quarto-html/quarto.js"></script>
+<script src="Annemarije_analyse_files/libs/quarto-html/popper.min.js"></script>
+<script src="Annemarije_analyse_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Annemarije_analyse_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Annemarije_analyse_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Annemarije_analyse_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Annemarije_analyse_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Annemarije_analyse_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Annemarije_analyse_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Annemarije_analyse</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="meta-aalyse-met-meta-en-metafor---r-script" class="level1">
+<h1>META-AALYSE MET META EN METAFOR - R SCRIPT</h1>
+<p>#VOORBEREIDING</p>
+<p>Definieer eerst de folder waarin je werkt. Dit is het pad van mij:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/Desktop/WERK/forensanalyse_24/Annemarije"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="inladen-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="inladen-dataset">Inladen dataset</h2>
+<p>Als je dat nog niet gedaan hebt, moet je dat eerst doen (hastag weghalen)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("readxl", "tidyverse", "meta", "metafor")</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(meta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: metadat
+Loading 'meta' package (version 7.0-0).
+Type 'help(meta)' for a brief overview.
+Readers of 'Meta-Analysis with R (Use R!)' should install
+older version of 'meta' package: https://tinyurl.com/dt4y5drs</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metafor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Matrix
+
+Attaching package: 'Matrix'
+
+The following objects are masked from 'package:tidyr':
+
+    expand, pack, unpack
+
+Loading required package: numDeriv
+
+Loading the 'metafor' package (version 4.4-0). For an
+introduction to the package please type: help(metafor)</code></pre>
+</div>
+</div>
+<p>Dit zijn de data.</p>
+<p>Opmerking: Als je dateset hebt, wees er zeker van dat je makkelijke variabelenamen hebt, zonder komma’s, een enkel woord of twee woorden aan elkaar of met een koppelteken.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"AnalysesAH_Def.sav"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Bekijk de dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View(dat) Dit moet je zelf maar doen, door hashtag weg te halen </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Bekijk ook de typen van de variabelen. Want, de uitkomstvariabelen die je wilt analyseren moeten numeriek zijn</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 12
+Columns: 14
+$ id               &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+$ author           &lt;chr&gt; "Olhaberry et al.", "Berube et al.", "Zvara et al.", …
+$ titel            &lt;chr&gt; "An explanatory model of parental sensitivity in the …
+$ es_sen           &lt;dbl&gt; -0.173, -0.300, -0.230, -0.160, -0.230, -0.350, -0.48…
+$ se_sen           &lt;dbl&gt; 0.114, 0.136, 0.071, 0.091, 0.289, 0.085, 0.093, 0.05…
+$ n_sen            &lt;dbl&gt; 80, 58, 204, 123, 15, 143, 119, 322, 204, 211, 58, 681
+$ es_Fz_sen        &lt;dbl&gt; -0.1748, -0.3095, -0.2342, -0.1614, -0.2342, -0.3654,…
+$ v_sen            &lt;dbl&gt; 0.0130, 0.0182, 0.0050, 0.0083, 0.0833, 0.0071, 0.008…
+$ gender_parent    &lt;dbl+lbl&gt; 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1
+$ age_parent       &lt;dbl+lbl&gt;  3,  3,  1,  1, NA,  2,  3,  2,  1,  3,  3,  1
+$ age_child        &lt;dbl+lbl&gt; 2, 2, 2, 2, 3, 0, 1, 1, 2, 0, 2, 0
+$ type_ACE         &lt;dbl+lbl&gt; 6, 6, 2, 6, 7, 5, 6, 6, 2, 6, 6, 0
+$ number_ACEs      &lt;dbl+lbl&gt; 4, 4, 0, 4, 9, 0, 4, 4, 0, 4, 4, 0
+$ year_publication &lt;dbl&gt; 2021, 2020, 2015, 2021, 2018, 2017, 2015, 2023, 2017,…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(dat, class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$id
+[1] "numeric"
+
+$author
+[1] "character"
+
+$titel
+[1] "character"
+
+$es_sen
+[1] "numeric"
+
+$se_sen
+[1] "numeric"
+
+$n_sen
+[1] "numeric"
+
+$es_Fz_sen
+[1] "numeric"
+
+$v_sen
+[1] "numeric"
+
+$gender_parent
+[1] "haven_labelled" "vctrs_vctr"     "double"        
+
+$age_parent
+[1] "haven_labelled" "vctrs_vctr"     "double"        
+
+$age_child
+[1] "haven_labelled" "vctrs_vctr"     "double"        
+
+$type_ACE
+[1] "haven_labelled" "vctrs_vctr"     "double"        
+
+$number_ACEs
+[1] "haven_labelled" "vctrs_vctr"     "double"        
+
+$year_publication
+[1] "numeric"</code></pre>
+</div>
+</div>
+<p>In dit geval moeten in ieder geval <code>es_sen</code> en <code>se_sen</code> numeriek zijn</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dat<span class="ot">&lt;-</span>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">es_sen =</span> <span class="fu">as.numeric</span>(es_sen),</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">se_sen =</span> <span class="fu">as.numeric</span>(se_sen))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Bekijk of deze twee variabelen nu wel numeriek zijn:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 12
+Columns: 14
+$ id               &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+$ author           &lt;chr&gt; "Olhaberry et al.", "Berube et al.", "Zvara et al.", …
+$ titel            &lt;chr&gt; "An explanatory model of parental sensitivity in the …
+$ es_sen           &lt;dbl&gt; -0.173, -0.300, -0.230, -0.160, -0.230, -0.350, -0.48…
+$ se_sen           &lt;dbl&gt; 0.114, 0.136, 0.071, 0.091, 0.289, 0.085, 0.093, 0.05…
+$ n_sen            &lt;dbl&gt; 80, 58, 204, 123, 15, 143, 119, 322, 204, 211, 58, 681
+$ es_Fz_sen        &lt;dbl&gt; -0.1748, -0.3095, -0.2342, -0.1614, -0.2342, -0.3654,…
+$ v_sen            &lt;dbl&gt; 0.0130, 0.0182, 0.0050, 0.0083, 0.0833, 0.0071, 0.008…
+$ gender_parent    &lt;dbl+lbl&gt; 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1
+$ age_parent       &lt;dbl+lbl&gt;  3,  3,  1,  1, NA,  2,  3,  2,  1,  3,  3,  1
+$ age_child        &lt;dbl+lbl&gt; 2, 2, 2, 2, 3, 0, 1, 1, 2, 0, 2, 0
+$ type_ACE         &lt;dbl+lbl&gt; 6, 6, 2, 6, 7, 5, 6, 6, 2, 6, 6, 0
+$ number_ACEs      &lt;dbl+lbl&gt; 4, 4, 0, 4, 9, 0, 4, 4, 0, 4, 4, 0
+$ year_publication &lt;dbl&gt; 2021, 2020, 2015, 2021, 2018, 2017, 2015, 2023, 2017,…</code></pre>
+</div>
+</div>
+<p>##BESCHRIJVENDE STATISTIEK</p>
+<p>Nu kun je de gegevens beschrijven. Vat een aantal gegevens samen en gebruik deze resultaten daarvoor.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       id           author             titel               es_sen      
+ Min.   : 1.00   Length:12          Length:12          Min.   :-0.489  
+ 1st Qu.: 3.75   Class :character   Class :character   1st Qu.:-0.301  
+ Median : 6.50   Mode  :character   Mode  :character   Median :-0.205  
+ Mean   : 6.50                                         Mean   :-0.228  
+ 3rd Qu.: 9.25                                         3rd Qu.:-0.160  
+ Max.   :12.00                                         Max.   :-0.040  
+                                                                       
+     se_sen            n_sen         es_Fz_sen           v_sen        
+ Min.   :0.03800   Min.   : 15.0   Min.   :-0.5351   Min.   :0.00150  
+ 1st Qu.:0.07075   1st Qu.: 74.5   1st Qu.:-0.3107   1st Qu.:0.00495  
+ Median :0.08800   Median :133.0   Median :-0.2081   Median :0.00770  
+ Mean   :0.10408   Mean   :184.8   Mean   :-0.2361   Mean   :0.01468  
+ 3rd Qu.:0.11925   3rd Qu.:205.8   3rd Qu.:-0.1614   3rd Qu.:0.01430  
+ Max.   :0.28900   Max.   :681.0   Max.   :-0.0400   Max.   :0.08330  
+                                                                      
+ gender_parent     age_parent      age_child        type_ACE    
+ Min.   :1.000   Min.   :1.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:1.000   1st Qu.:1.000   1st Qu.:0.750   1st Qu.:4.250  
+ Median :1.000   Median :2.000   Median :2.000   Median :6.000  
+ Mean   :1.167   Mean   :2.091   Mean   :1.417   Mean   :4.833  
+ 3rd Qu.:1.000   3rd Qu.:3.000   3rd Qu.:2.000   3rd Qu.:6.000  
+ Max.   :2.000   Max.   :3.000   Max.   :3.000   Max.   :7.000  
+                 NA's   :1                                      
+  number_ACEs    year_publication
+ Min.   :0.000   Min.   :2009    
+ 1st Qu.:0.000   1st Qu.:2016    
+ Median :4.000   Median :2019    
+ Mean   :3.083   Mean   :2018    
+ 3rd Qu.:4.000   3rd Qu.:2021    
+ Max.   :9.000   Max.   :2024    
+                                 </code></pre>
+</div>
+</div>
+<p>##META-ANALYSE MET META</p>
+<p>Hier naar <code>r</code> gekeken, niet naar <code>fischer's z</code> wat eigenlijk nodig is</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>m.gen<span class="ot">&lt;-</span><span class="fu">metagen</span>(<span class="at">TE=</span>es_sen,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">seTE=</span>se_sen,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">studlab=</span>author,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">data=</span>dat,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">sm=</span><span class="st">"r"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">fixed=</span><span class="cn">FALSE</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">random=</span><span class="cn">TRUE</span>,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">method.tau=</span><span class="st">"REML"</span>,</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">hakn=</span><span class="cn">TRUE</span>,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">title=</span><span class="st">"Meta-analyse Anne"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m.gen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Review:     Meta-analyse Anne
+
+                       r             95%-CI %W(random)
+Olhaberry et al. -0.1730 [-0.3964;  0.0504]        6.5
+Berube et al.    -0.3000 [-0.5666; -0.0334]        5.2
+Zvara et al.     -0.2300 [-0.3692; -0.0908]       10.2
+Alto et al.      -0.1600 [-0.3384;  0.0184]        8.3
+Ziv et al.       -0.2300 [-0.7964;  0.3364]        1.5
+Friesen et al.   -0.3500 [-0.5166; -0.1834]        8.8
+Fuchs et al.     -0.4890 [-0.6713; -0.3067]        8.1
+Flagg et al.     -0.0400 [-0.1498;  0.0698]       11.8
+Zvara et al.     -0.1200 [-0.2592;  0.0192]       10.2
+MacMillan et al. -0.1800 [-0.3172; -0.0428]       10.3
+Berube et al.    -0.3040 [-0.5686; -0.0394]        5.2
+Bert et al.      -0.1600 [-0.2345; -0.0855]       13.8
+
+Number of studies: k = 12
+
+                                r             95%-CI     t  p-value
+Random effects model (HK) -0.2111 [-0.2895; -0.1327] -5.93 &lt; 0.0001
+
+Quantifying heterogeneity:
+ tau^2 = 0.0089 [0.0006; 0.0335]; tau = 0.0943 [0.0255; 0.1831]
+ I^2 = 55.0% [13.8%; 76.5%]; H = 1.49 [1.08; 2.06]
+
+Test of heterogeneity:
+     Q d.f. p-value
+ 24.44   11  0.0110
+
+Details on meta-analytical method:
+- Inverse variance method
+- Restricted maximum-likelihood estimator for tau^2
+- Q-Profile method for confidence interval of tau^2 and tau
+- Hartung-Knapp adjustment for random effects model (df = 11)</code></pre>
+</div>
+</div>
+<p>Voor interpretatie, zie straks</p>
+<p>Nu een forest plot maken van de data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(m.gen,</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">sortvar=</span>TE,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">prediction=</span><span class="cn">TRUE</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">print.tau=</span><span class="cn">FALSE</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">leftlabs=</span><span class="fu">c</span>(<span class="st">"author"</span>, <span class="st">"r"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Annemarije_analyse_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><embed src="forestAnnemarije.pdf" class="img-fluid"></p>
+<p>##MODERATIE EN SUBGROEPANALYSE</p>
+<p>Subgroep analyse (heeft aantal ACE invloed, categoriale variabele)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span>(m.gen, <span class="at">subgroup =</span> number_ACEs, <span class="at">tau.common =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Review:     Meta-analyse Anne
+
+Number of studies: k = 12
+
+                                r             95%-CI     t  p-value
+Random effects model (HK) -0.2111 [-0.2895; -0.1327] -5.93 &lt; 0.0001
+
+Quantifying heterogeneity:
+ tau^2 = 0.0089 [0.0006; 0.0335]; tau = 0.0943 [0.0255; 0.1831]
+ I^2 = 55.0% [13.8%; 76.5%]; H = 1.49 [1.08; 2.06]
+
+Test of heterogeneity:
+     Q d.f. p-value
+ 24.44   11  0.0110
+
+Results for subgroups (random effects model (HK)):
+                  k       r             95%-CI  tau^2    tau     Q   I^2
+number_ACEs = 4   7 -0.2209 [-0.3600; -0.0818] 0.0158 0.1258 18.96 68.4%
+number_ACEs = 0   4 -0.1987 [-0.3414; -0.0560] 0.0029 0.0535  5.44 44.8%
+number_ACEs = 9   1 -0.2300 [-0.7964;  0.3364]     --     --  0.00    --
+
+Test for subgroup differences (random effects model (HK)):
+                  Q d.f. p-value
+Between groups 0.10    2  0.9513
+
+Details on meta-analytical method:
+- Inverse variance method
+- Restricted maximum-likelihood estimator for tau^2
+- Q-Profile method for confidence interval of tau^2 and tau
+- Hartung-Knapp adjustment for random effects model (df = 11)</code></pre>
+</div>
+</div>
+<p>Meta-regressie (invloed van jaar van publicatie, continue variabele)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>m.gen.reg<span class="ot">&lt;-</span><span class="fu">metareg</span>(m.gen, <span class="sc">~</span>year_publication) </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>m.gen.reg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Mixed-Effects Model (k = 12; tau^2 estimator: REML)
+
+tau^2 (estimated amount of residual heterogeneity):     0.0104 (SE = 0.0083)
+tau (square root of estimated tau^2 value):             0.1019
+I^2 (residual heterogeneity / unaccounted variability): 58.59%
+H^2 (unaccounted variability / sampling variability):   2.41
+R^2 (amount of heterogeneity accounted for):            0.00%
+
+Test for Residual Heterogeneity:
+QE(df = 10) = 23.9188, p-val = 0.0078
+
+Test of Moderators (coefficient 2):
+F(df1 = 1, df2 = 10) = 0.4145, p-val = 0.5342
+
+Model Results:
+
+                  estimate       se     tval  df    pval     ci.lb    ci.ub    
+intrcpt           -10.8898  16.5839  -0.6567  10  0.5262  -47.8411  26.0614    
+year_publication    0.0053   0.0082   0.6438  10  0.5342   -0.0130   0.0236    
+
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+<section id="meta-analyse-met-metafor" class="level2">
+<h2 class="anchored" data-anchor-id="meta-analyse-met-metafor">META ANALYSE MET METAFOR</h2>
+<p>Hier Quintana DS (2015, 2021), als basis gebruikt (http://github.com/dsquintana/corr_meta). Kijk vooral ook naar zijn video’s op youtube https://www.google.com/search?client=firefox-b-d&amp;q=quintana+meta-analysis+2021+you+tube#fpstate=ive&amp;vld=cid:7ef42ca1,vid:lH4VZMTEZSc,st:0)</p>
+<p>Pakketten zijn al geinstalleerd en geladen als het goed is (<code>tidyverse</code>, <code>metafor</code>). Nog niet geinstalleerd? Haal dan hashtag weg.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(c("metafor", "tidyverse"))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Vervolgens pakketten laden</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"metafor"</span>) </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>De data zijn al binnengehaald en bewerkt.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 12
+Columns: 14
+$ id               &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+$ author           &lt;chr&gt; "Olhaberry et al.", "Berube et al.", "Zvara et al.", …
+$ titel            &lt;chr&gt; "An explanatory model of parental sensitivity in the …
+$ es_sen           &lt;dbl&gt; -0.173, -0.300, -0.230, -0.160, -0.230, -0.350, -0.48…
+$ se_sen           &lt;dbl&gt; 0.114, 0.136, 0.071, 0.091, 0.289, 0.085, 0.093, 0.05…
+$ n_sen            &lt;dbl&gt; 80, 58, 204, 123, 15, 143, 119, 322, 204, 211, 58, 681
+$ es_Fz_sen        &lt;dbl&gt; -0.1748, -0.3095, -0.2342, -0.1614, -0.2342, -0.3654,…
+$ v_sen            &lt;dbl&gt; 0.0130, 0.0182, 0.0050, 0.0083, 0.0833, 0.0071, 0.008…
+$ gender_parent    &lt;dbl+lbl&gt; 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1
+$ age_parent       &lt;dbl+lbl&gt;  3,  3,  1,  1, NA,  2,  3,  2,  1,  3,  3,  1
+$ age_child        &lt;dbl+lbl&gt; 2, 2, 2, 2, 3, 0, 1, 1, 2, 0, 2, 0
+$ type_ACE         &lt;dbl+lbl&gt; 6, 6, 2, 6, 7, 5, 6, 6, 2, 6, 6, 0
+$ number_ACEs      &lt;dbl+lbl&gt; 4, 4, 0, 4, 9, 0, 4, 4, 0, 4, 4, 0
+$ year_publication &lt;dbl&gt; 2021, 2020, 2015, 2021, 2018, 2017, 2015, 2023, 2017,…</code></pre>
+</div>
+</div>
+</section>
+<section id="de-meta-analyse-uitvoeren" class="level2">
+<h2 class="anchored" data-anchor-id="de-meta-analyse-uitvoeren">De Meta-analyse uitvoeren</h2>
+<p>De eerste stap is <code>r</code> naar <code>Z</code> omzetten en de bijbehorende sample variantie te berekenen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>dat2 <span class="ot">&lt;-</span> <span class="fu">escalc</span>(<span class="at">measure=</span><span class="st">"ZCOR"</span>, <span class="at">ri=</span>es_sen, <span class="at">ni=</span>n_sen, <span class="at">data=</span>dat, <span class="at">slab=</span><span class="fu">paste</span>(author, year_publication, <span class="at">sep=</span><span class="st">", "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Nieuwe dataset hebben we <code>dat2</code> genoemd. Er zijn twee variabelen toegevoegd: <code>ri</code> is de nieuwe correlatie coefficient en <code>ni</code> is de omvang van de sample (de <code>n</code> zeg maar).</p>
+<p>Laten we de file nog eens bekijken. Aan het einde staan twee nieuwe variabelen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># De "yi" variabele is de tot z-score getransformeerde variabele en de "vi" variabele is de corresponderende geschatte sample variantie.</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dat2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 12
+Columns: 16
+$ id               &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+$ author           &lt;chr&gt; "Olhaberry et al.", "Berube et al.", "Zvara et al.", …
+$ titel            &lt;chr&gt; "An explanatory model of parental sensitivity in the …
+$ es_sen           &lt;dbl&gt; -0.173, -0.300, -0.230, -0.160, -0.230, -0.350, -0.48…
+$ se_sen           &lt;dbl&gt; 0.114, 0.136, 0.071, 0.091, 0.289, 0.085, 0.093, 0.05…
+$ n_sen            &lt;dbl&gt; 80, 58, 204, 123, 15, 143, 119, 322, 204, 211, 58, 681
+$ es_Fz_sen        &lt;dbl&gt; -0.1748, -0.3095, -0.2342, -0.1614, -0.2342, -0.3654,…
+$ v_sen            &lt;dbl&gt; 0.0130, 0.0182, 0.0050, 0.0083, 0.0833, 0.0071, 0.008…
+$ gender_parent    &lt;dbl+lbl&gt; 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1
+$ age_parent       &lt;dbl+lbl&gt;  3,  3,  1,  1, NA,  2,  3,  2,  1,  3,  3,  1
+$ age_child        &lt;dbl+lbl&gt; 2, 2, 2, 2, 3, 0, 1, 1, 2, 0, 2, 0
+$ type_ACE         &lt;dbl+lbl&gt; 6, 6, 2, 6, 7, 5, 6, 6, 2, 6, 6, 0
+$ number_ACEs      &lt;dbl+lbl&gt; 4, 4, 0, 4, 9, 0, 4, 4, 0, 4, 4, 0
+$ year_publication &lt;dbl&gt; 2021, 2020, 2015, 2021, 2018, 2017, 2015, 2023, 2017,…
+$ yi               &lt;dbl&gt; -0.17475758, -0.30951960, -0.23418947, -0.16138670, -…
+$ vi               &lt;dbl&gt; 0.012987013, 0.018181818, 0.004975124, 0.00833333…</code></pre>
+</div>
+</div>
+<p>Nu kunnen we de meta-analyse uitvoeren met een random effect model.</p>
+<p>De volgende opdrachten printen de gegevens en berekenen en printen ook het betrouwbaarheidsinterval voor de hoeveelheid heterogeniteit (<span class="math inline">\(I^2\)</span>).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>res<span class="ot">&lt;-</span> <span class="fu">rma</span>(yi, vi, <span class="at">data=</span>dat2) </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>res </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Random-Effects Model (k = 12; tau^2 estimator: REML)
+
+tau^2 (estimated amount of total heterogeneity): 0.0117 (SE = 0.0083)
+tau (square root of estimated tau^2 value):      0.1084
+I^2 (total heterogeneity / total variability):   66.28%
+H^2 (total variability / sampling variability):  2.97
+
+Test for Heterogeneity:
+Q(df = 11) = 28.9707, p-val = 0.0023
+
+Model Results:
+
+estimate      se     zval    pval    ci.lb    ci.ub      
+ -0.2213  0.0411  -5.3863  &lt;.0001  -0.3018  -0.1408  *** 
+
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>De output geeft belangijke informatie om in de resultaten van de meta-analysis te vermelden, laten we het aan de hand van de resultaten van de meta-analyse dat eens zien.</p>
+<ul>
+<li>“Random-Effects Model (k = 12; tau^2 estimator: REML)”</li>
+</ul>
+<p>Deze lijn vertelt dat we een random-effects model hebben gebruikt, met 12 studies (“k”) en dat de graad van = heterogeniteit (tau^2) was berekend met een ‘restricted maximum-likelihood’ schatter.</p>
+<ul>
+<li><p>“tau^2 (schat de hoeveelheid totale heterogeniteit): 0.0088 (SE = 0.0070)”.</p></li>
+<li><p>De volgende regel geeft aan dat de <code>tau-squared</code> 0.0940 was.</p></li>
+<li><p>“I^2 (totale heterogeniteit / totale variabiliteit): 59.48%”</p></li>
+<li><p>Deze regel geeft aan dat <span class="math inline">\(I^2\)</span> 59.48% was. Met andere woorden 59,48% van de variatie weerspiegelde werkelijke verschillen in het populatiegemiddelde.</p></li>
+<li><p>“Test for Heterogeneity: Q(df = 11) = 26.6345, p-val &lt; 0.01”</p></li>
+<li><p>De volgende twee regels tonen de Q-statistiek met vrijheidsgraden en de p-waarde van de test. In deze analyse is de p-waarde 0,0009, wat suggereert dat de geïncludeerde onderzoeken geen gemeenschappelijke effectgrootte hebben.</p></li>
+<li><p>Model Results:</p></li>
+</ul>
+<p>estimate se zval pval ci.lb ci.ub<br>
+-0.2163 0.0381-5.6727 &lt;.0001 -0.2910 -0.1416 ***</p>
+<ul>
+<li>Tot slot hebben we de modelresultaten. De “estimate” geeft de geschatte modelcoëfficiënt (d.w.z. de samenvattende effectgrootte) met standaardfout (“se”). De z-waarde is de bijbehorende teststatistiek, “pval” is de bijbehorende p-waarde, “ci.lb” de ondergrens van het betrouwbaarheidsinterval en “ci.ub” de bovengrens van het betrouwbaarheidsinterval.</li>
+</ul>
+<p>Hier wat extra informatie over de heterogeniteit (met betrouwbaarheidsintervallen)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+       estimate   ci.lb   ci.ub 
+tau^2    0.0117  0.0018  0.0417 
+tau      0.1084  0.0428  0.2042 
+I^2(%)  66.2770 23.4633 87.4635 
+H^2      2.9653  1.3066  7.9767 </code></pre>
+</div>
+</div>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>estimate</th>
+<th>ci.lb</th>
+<th>ci.ub</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>tau^2</td>
+<td>0.0088</td>
+<td>0.0010</td>
+<td>0.0397</td>
+</tr>
+<tr class="even">
+<td>tau</td>
+<td>0.0940</td>
+<td>0.0310</td>
+<td>0.1994</td>
+</tr>
+<tr class="odd">
+<td>I^2</td>
+<td>59.475</td>
+<td>13.803</td>
+<td>86.847</td>
+</tr>
+<tr class="even">
+<td>H^2</td>
+<td>2.4676</td>
+<td>1.1601</td>
+<td>7.6027</td>
+</tr>
+</tbody>
+</table>
+<p>Deze vier lijnen tonen schattingen en 95% betrouwbaarheidsintervallen voor heterogeniteitsmaten zoals hierboven beschreven.</p>
+<p>Nu de score weer terug naar <code>r</code>. Met interval voor <code>r</code> en interval over studies heen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(res, <span class="at">digits=</span><span class="dv">3</span>, <span class="at">transf =</span> transf.ztor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+   pred  ci.lb  ci.ub  pi.lb pi.ub 
+ -0.218 -0.293 -0.140 -0.421 0.006 </code></pre>
+</div>
+</div>
+<p>Deze regel toont de transformatie van Fisher’s z terug naar Pearson’s r (“pred”) en het 95% betrouwbaarheidsinterval voor r (“ci.lb” en “ci.ub”) voor het rapporteren van de meta-analyse.</p>
+<p>Hoewel de Q-statistiek en <span class="math inline">\(I^2\)</span> bewijs kunnen leveren voor heterogeniteit, geven ze geen informatie over welke studies van invloed kunnen zijn op de algehele heterogeniteit. Er is ook een reeks diagnoses beschikbaar om potentiële uitschieters en invloedrijke gevallen te identificeren.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>inf<span class="ot">&lt;-</span> <span class="fu">influence</span>(res) </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(inf) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+                       rstudent  dffits cook.d  cov.r tau2.del  QE.del    hat 
+Olhaberry et al., 2021   0.3050  0.1108 0.0130 1.1634   0.0132 28.9522 0.0682 
+Berube et al., 2020     -0.5153 -0.1138 0.0133 1.1053   0.0125 28.1639 0.0564 
+Zvara et al., 2015      -0.0871  0.0066 0.0000 1.2415   0.0139 28.5373 0.1009 
+Alto et al., 2021        0.4333  0.1613 0.0282 1.1929   0.0134 28.8671 0.0841 
+Ziv et al., 2018        -0.0411  0.0018 0.0000 1.0400   0.0121 28.9470 0.0178 
+Friesen et al., 2017    -1.1338 -0.3744 0.1332 1.0406   0.0108 24.3631 0.0894 
+Fuchs et al., 2015      -3.0573 -1.1944 0.8583 0.5729   0.0036 14.4055 0.0829 
+Flagg et al., 2023       1.7628  0.5714 0.2538 0.9244   0.0084 20.5726 0.1134 
+Zvara et al., 2017       0.8027  0.2868 0.0875 1.1766   0.0128 27.9054 0.1009 
+MacMillan et al., 2021   0.3152  0.1402 0.0222 1.2413   0.0139 28.9561 0.1020 
+Berube et al., 2024     -0.5417 -0.1210 0.0150 1.1027   0.0125 28.1035 0.0564 
+Bert et al., 2009        0.5302  0.2288 0.0606 1.2699   0.0138 28.1683 0.1277 
+                        weight    dfbs inf 
+Olhaberry et al., 2021  6.8242  0.1097     
+Berube et al., 2020     5.6397 -0.1129     
+Zvara et al., 2015     10.0940  0.0066     
+Alto et al., 2021       8.4058  0.1607     
+Ziv et al., 2018        1.7752  0.0018     
+Friesen et al., 2017    8.9356 -0.3748     
+Fuchs et al., 2015      8.2872 -1.2714   * 
+Flagg et al., 2023     11.3423  0.5582     
+Zvara et al., 2017     10.0940  0.2875     
+MacMillan et al., 2021 10.1961  0.1409     
+Berube et al., 2024     5.6397 -0.1201     
+Bert et al., 2009      12.7664  0.2332     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(inf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Annemarije_analyse_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>De plot visualiseert de afgedrukte dataset. Omdat er geen studies met een sterretje in de afgedrukte dataset staan, voldeed geen enkele studie aan de criteria voor een invloedrijke studie.</p>
+</section>
+<section id="forest-plot-met-metafor" class="level2">
+<h2 class="anchored" data-anchor-id="forest-plot-met-metafor">Forest plot met <code>metafor</code></h2>
+<p>Nu visualiseren we de meta-analyse met een forest plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(res, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.6</span>,<span class="fl">1.6</span>), <span class="at">atransf=</span>transf.ztor,</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">at=</span><span class="fu">transf.rtoz</span>(<span class="fu">c</span>(<span class="sc">-</span>.<span class="dv">4</span>,<span class="sc">-</span>.<span class="dv">2</span>,<span class="dv">0</span>,.<span class="dv">2</span>,.<span class="dv">4</span>,.<span class="dv">6</span>)), <span class="at">digits=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>), <span class="at">cex=</span>.<span class="dv">8</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span><span class="fl">1.6</span>, <span class="dv">18</span>, <span class="st">"Author(s), Year"</span>, <span class="at">pos=</span><span class="dv">4</span>, <span class="at">cex=</span>.<span class="dv">8</span>)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>( <span class="fl">1.6</span>, <span class="dv">18</span>, <span class="st">"Correlation [95% CI]"</span>, <span class="at">pos=</span><span class="dv">2</span>, <span class="at">cex=</span>.<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Annemarije_analyse_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Of toch maar simpel</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">forest</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Annemarije_analyse_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We hebben een plot gemaakt met alle 12 onderzoeken. Belangrijk is dat de correlaties en 95% CI’s voor elke studie worden gerapporteerd, evenals de samenvattende effectgrootte (de polygoon onderaan). De randen van de polygoon geven de 95%-betrouwbaarheidsgrens weer. Let op de verschillende groottes van elk vierkant - de studies met grotere vierkanten droegen meer bij aan de samenvattende effectgrootte.</p>
+</section>
+<section id="publication-bias" class="level2">
+<h2 class="anchored" data-anchor-id="publication-bias">Publication bias</h2>
+<p>Dit is een begin, nog verder aanscherpen. Hier gaat het alleen maar om invloed van kleine studies</p>
+</section>
+<section id="funnel-plot" class="level2">
+<h2 class="anchored" data-anchor-id="funnel-plot">funnel plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">funnel</span>(res, <span class="at">xlab =</span> <span class="st">"Correlation coefficient"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Annemarije_analyse_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Testen voor bias</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regtest</span>(res) <span class="co"># Eggers regressie test \# ranktest(res)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Regression Test for Funnel Plot Asymmetry
+
+Model:     mixed-effects meta-regression model
+Predictor: standard error
+
+Test for Funnel Plot Asymmetry: z = -1.2330, p = 0.2176
+Limit Estimate (as sei -&gt; 0):   b = -0.1168 (CI: -0.2954, 0.0617)</code></pre>
+</div>
+</div>
+</section>
+<section id="moderatoren-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="moderatoren-analysis">Moderatoren analysis</h2>
+<p>Laten we eens kijken naar moderatie-effect van <code>number_ACE</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>res.modage <span class="ot">&lt;-</span> <span class="fu">rma</span>(yi, vi, <span class="at">mods =</span> <span class="sc">~</span> number_ACEs, <span class="at">data=</span>dat2) </span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>res.modage</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Mixed-Effects Model (k = 12; tau^2 estimator: REML)
+
+tau^2 (estimated amount of residual heterogeneity):     0.0136 (SE = 0.0097)
+tau (square root of estimated tau^2 value):             0.1164
+I^2 (residual heterogeneity / unaccounted variability): 67.70%
+H^2 (unaccounted variability / sampling variability):   3.10
+R^2 (amount of heterogeneity accounted for):            0.00%
+
+Test for Residual Heterogeneity:
+QE(df = 10) = 28.9702, p-val = 0.0013
+
+Test of Moderators (coefficient 2):
+QM(df = 1) = 0.0309, p-val = 0.8604
+
+Model Results:
+
+             estimate      se     zval    pval    ci.lb    ci.ub      
+intrcpt       -0.2141  0.0650  -3.2917  0.0010  -0.3415  -0.0866  *** 
+number_ACEs   -0.0035  0.0199  -0.1759  0.8604  -0.0426   0.0356      
+
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>De gegevens onder de regel “Test van moderatoren” geven de benodigde informatie. Aangezien de p-waarde groter was dan 0,05, bewijst dit <code>number_Aces</code> de waargenomen correlatie niet significant heeft gematigd.</p>
+<p>Nu gebruiken we dezelfde variabele als factor Hier kijken we naar het modererende effect van het feit of er voor variabelen werd gecontroleerd.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>res.mes<span class="ot">&lt;-</span> <span class="fu">rma</span>(yi, vi, <span class="at">mods =</span> <span class="sc">~</span> <span class="fu">factor</span>(number_ACEs), <span class="at">data=</span>dat2) </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>res.mes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Mixed-Effects Model (k = 12; tau^2 estimator: REML)
+
+tau^2 (estimated amount of residual heterogeneity):     0.0144 (SE = 0.0102)
+tau (square root of estimated tau^2 value):             0.1200
+I^2 (residual heterogeneity / unaccounted variability): 70.82%
+H^2 (unaccounted variability / sampling variability):   3.43
+R^2 (amount of heterogeneity accounted for):            0.00%
+
+Test for Residual Heterogeneity:
+QE(df = 9) = 28.9466, p-val = 0.0007
+
+Test of Moderators (coefficients 2:3):
+QM(df = 2) = 0.0325, p-val = 0.9839
+
+Model Results:
+
+                      estimate      se     zval    pval    ci.lb    ci.ub     
+intrcpt                -0.2137  0.0686  -3.1157  0.0018  -0.3481  -0.0793  ** 
+factor(number_ACEs)4   -0.0159  0.0900  -0.1768  0.8597  -0.1923   0.1605     
+factor(number_ACEs)9   -0.0205  0.3201  -0.0640  0.9490  -0.6478   0.6068     
+
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="moderator-voor-moderator-leeftijd_ouder-age_parent" class="level1">
+<h1>Moderator voor moderator leeftijd_ouder <code>age_parent</code></h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>res.modq <span class="ot">&lt;-</span> <span class="fu">rma</span>(yi, vi, <span class="at">mods =</span> <span class="sc">~</span> age_parent, <span class="at">data=</span>dat2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: 1 study with NAs omitted from model fitting.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>res.modq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Mixed-Effects Model (k = 11; tau^2 estimator: REML)
+
+tau^2 (estimated amount of residual heterogeneity):     0.0107 (SE = 0.0083)
+tau (square root of estimated tau^2 value):             0.1037
+I^2 (residual heterogeneity / unaccounted variability): 65.15%
+H^2 (unaccounted variability / sampling variability):   2.87
+R^2 (amount of heterogeneity accounted for):            11.39%
+
+Test for Residual Heterogeneity:
+QE(df = 9) = 24.8451, p-val = 0.0031
+
+Test of Moderators (coefficient 2):
+QM(df = 1) = 2.0432, p-val = 0.1529
+
+Model Results:
+
+            estimate      se     zval    pval    ci.lb   ci.ub    
+intrcpt      -0.0942  0.0969  -0.9721  0.3310  -0.2841  0.0957    
+age_parent   -0.0648  0.0453  -1.4294  0.1529  -0.1536  0.0240    
+
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Aangezien de p-waarde groter was dan 0,05, levert dit bewijs dat de leeftijd_ouder de waargenomen correlatie niet significant beïnvloedde.</p>
+</section>
+<section id="moderator-voor-moderator-leeftijd_kind-age_child" class="level1">
+<h1>Moderator voor moderator leeftijd_kind <code>age_child</code></h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>res.modq <span class="ot">&lt;-</span> <span class="fu">rma</span>(yi, vi, <span class="at">mods =</span> <span class="sc">~</span> age_child, <span class="at">data=</span>dat2)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>res.modq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Mixed-Effects Model (k = 12; tau^2 estimator: REML)
+
+tau^2 (estimated amount of residual heterogeneity):     0.0137 (SE = 0.0098)
+tau (square root of estimated tau^2 value):             0.1171
+I^2 (residual heterogeneity / unaccounted variability): 67.78%
+H^2 (unaccounted variability / sampling variability):   3.10
+R^2 (amount of heterogeneity accounted for):            0.00%
+
+Test for Residual Heterogeneity:
+QE(df = 10) = 28.9697, p-val = 0.0013
+
+Test of Moderators (coefficient 2):
+QM(df = 1) = 0.0404, p-val = 0.8407
+
+Model Results:
+
+           estimate      se     zval    pval    ci.lb    ci.ub     
+intrcpt     -0.2342  0.0715  -3.2732  0.0011  -0.3744  -0.0940  ** 
+age_child    0.0096  0.0476   0.2010  0.8407  -0.0838   0.1029     
+
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Aangezien de p-waarde groter was dan 0,05, levert dit bewijs dat de leeftijd_kind de waargenomen correlatie niet significant beïnvloedde.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

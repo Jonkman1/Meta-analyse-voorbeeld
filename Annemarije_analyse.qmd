@@ -1,0 +1,306 @@
+---
+title: "Annemarije_analyse"
+format: html
+editor: visual
+---
+
+# META-AALYSE MET META EN METAFOR - R SCRIPT
+
+#VOORBEREIDING
+
+Definieer eerst de folder waarin je werkt. Dit is het pad van mij:
+
+```{r}
+setwd("~/Desktop/WERK/forensanalyse_24/Annemarije")
+```
+
+## Inladen dataset
+
+Als je dat nog niet gedaan hebt, moet je dat eerst doen (hastag weghalen)
+
+```{r}
+# install.packages("readxl", "tidyverse", "meta", "metafor")
+library(readxl)
+library(haven)
+library(tidyverse)
+library(meta)
+library(metafor)
+
+```
+
+Dit zijn de data.
+
+Opmerking: Als je dateset hebt, wees er zeker van dat je makkelijke variabelenamen hebt, zonder komma's, een enkel woord of twee woorden aan elkaar of met een koppelteken.
+
+```{r}
+dat <- read_sav("AnalysesAH_Def.sav")
+```
+
+Bekijk de dataset
+
+```{r}
+# View(dat) Dit moet je zelf maar doen, door hashtag weg te halen 
+```
+
+Bekijk ook de typen van de variabelen. Want, de uitkomstvariabelen die je wilt analyseren moeten numeriek zijn
+
+```{r}
+glimpse(dat)
+sapply(dat, class)
+```
+
+In dit geval moeten in ieder geval `es_sen` en `se_sen` numeriek zijn
+
+```{r}
+dat<-dat %>% 
+  mutate(es_sen = as.numeric(es_sen),
+         se_sen = as.numeric(se_sen))
+```
+
+Bekijk of deze twee variabelen nu wel numeriek zijn:
+
+```{r}
+glimpse(dat)
+```
+
+##BESCHRIJVENDE STATISTIEK
+
+Nu kun je de gegevens beschrijven. Vat een aantal gegevens samen en gebruik deze resultaten daarvoor.
+
+```{r}
+summary(dat)
+```
+
+##META-ANALYSE MET META
+
+Hier naar `r` gekeken, niet naar `fischer's z` wat eigenlijk nodig is
+
+```{r}
+m.gen<-metagen(TE=es_sen,
+               seTE=se_sen,
+               studlab=author,
+               data=dat,
+               sm="r",
+               fixed=FALSE,
+               random=TRUE,
+               method.tau="REML",
+               hakn=TRUE,
+               title="Meta-analyse Anne")
+```
+
+```{r}
+summary(m.gen)
+```
+
+Voor interpretatie, zie straks
+
+Nu een forest plot maken van de data
+
+```{r}
+forest(m.gen,
+            sortvar=TE,
+            prediction=TRUE,
+            print.tau=FALSE,
+            leftlabs=c("author", "r"))
+
+```
+
+![](forestAnnemarije.pdf)
+
+##MODERATIE EN SUBGROEPANALYSE
+
+Subgroep analyse (heeft aantal ACE invloed, categoriale variabele)
+
+```{r}
+update(m.gen, subgroup = number_ACEs, tau.common = FALSE)
+```
+
+Meta-regressie (invloed van jaar van publicatie, continue variabele)
+
+```{r}
+m.gen.reg<-metareg(m.gen, ~year_publication) 
+m.gen.reg
+```
+
+## META ANALYSE MET METAFOR
+
+Hier Quintana DS (2015, 2021), als basis gebruikt (http://github.com/dsquintana/corr_meta). Kijk vooral ook naar zijn video's op youtube https://www.google.com/search?client=firefox-b-d&q=quintana+meta-analysis+2021+you+tube#fpstate=ive&vld=cid:7ef42ca1,vid:lH4VZMTEZSc,st:0)
+
+Pakketten zijn al geinstalleerd en geladen als het goed is (`tidyverse`, `metafor`). Nog niet geinstalleerd? Haal dan hashtag weg.
+
+```{r}
+#install.packages(c("metafor", "tidyverse"))
+```
+
+Vervolgens pakketten laden
+
+```{r}
+library("metafor") 
+library("dplyr")
+```
+
+De data zijn al binnengehaald en bewerkt.
+
+```{r}
+glimpse(dat)
+```
+
+## De Meta-analyse uitvoeren
+
+De eerste stap is `r` naar `Z` omzetten en de bijbehorende sample variantie te berekenen.
+
+```{r}
+
+dat2 <- escalc(measure="ZCOR", ri=es_sen, ni=n_sen, data=dat, slab=paste(author, year_publication, sep=", "))
+
+```
+
+Nieuwe dataset hebben we `dat2` genoemd. Er zijn twee variabelen toegevoegd: `ri` is de nieuwe correlatie coefficient en `ni` is de omvang van de sample (de `n` zeg maar).
+
+Laten we de file nog eens bekijken. Aan het einde staan twee nieuwe variabelen.
+
+```{r}
+# De "yi" variabele is de tot z-score getransformeerde variabele en de "vi" variabele is de corresponderende geschatte sample variantie.
+
+glimpse(dat2)
+```
+
+Nu kunnen we de meta-analyse uitvoeren met een random effect model.
+
+De volgende opdrachten printen de gegevens en berekenen en printen ook het betrouwbaarheidsinterval voor de hoeveelheid heterogeniteit ($I^2$).
+
+```{r}
+res<- rma(yi, vi, data=dat2) 
+res 
+```
+
+De output geeft belangijke informatie om in de resultaten van de meta-analysis te vermelden, laten we het aan de hand van de resultaten van de meta-analyse dat eens zien.
+
+-   "Random-Effects Model (k = 12; tau\^2 estimator: REML)"
+
+Deze lijn vertelt dat we een random-effects model hebben gebruikt, met 12 studies ("k") en dat de graad van = heterogeniteit (tau\^2) was berekend met een 'restricted maximum-likelihood' schatter.
+
+-   "tau\^2 (schat de hoeveelheid totale heterogeniteit): 0.0088 (SE = 0.0070)".
+
+-   De volgende regel geeft aan dat de `tau-squared` 0.0940 was.
+
+-   "I\^2 (totale heterogeniteit / totale variabiliteit): 59.48%"
+
+-   Deze regel geeft aan dat $I^2$ 59.48% was. Met andere woorden 59,48% van de variatie weerspiegelde werkelijke verschillen in het populatiegemiddelde.
+
+-   "Test for Heterogeneity: Q(df = 11) = 26.6345, p-val \< 0.01"
+
+-   De volgende twee regels tonen de Q-statistiek met vrijheidsgraden en de p-waarde van de test. In deze analyse is de p-waarde 0,0009, wat suggereert dat de geïncludeerde onderzoeken geen gemeenschappelijke effectgrootte hebben.
+
+-   Model Results:
+
+estimate se zval pval ci.lb ci.ub\
+-0.2163 0.0381-5.6727 \<.0001 -0.2910 -0.1416 \*\*\*
+
+-   Tot slot hebben we de modelresultaten. De "estimate" geeft de geschatte modelcoëfficiënt (d.w.z. de samenvattende effectgrootte) met standaardfout ("se"). De z-waarde is de bijbehorende teststatistiek, "pval" is de bijbehorende p-waarde, "ci.lb" de ondergrens van het betrouwbaarheidsinterval en "ci.ub" de bovengrens van het betrouwbaarheidsinterval.
+
+Hier wat extra informatie over de heterogeniteit (met betrouwbaarheidsintervallen)
+
+```{r}
+confint(res)
+```
+
+|        | estimate | ci.lb  | ci.ub  |
+|--------|----------|--------|--------|
+| tau\^2 | 0.0088   | 0.0010 | 0.0397 |
+| tau    | 0.0940   | 0.0310 | 0.1994 |
+| I\^2   | 59.475   | 13.803 | 86.847 |
+| H\^2   | 2.4676   | 1.1601 | 7.6027 |
+
+Deze vier lijnen tonen schattingen en 95% betrouwbaarheidsintervallen voor heterogeniteitsmaten zoals hierboven beschreven.
+
+Nu de score weer terug naar `r`. Met interval voor `r` en interval over studies heen.
+
+```{r}
+predict(res, digits=3, transf = transf.ztor)
+```
+
+Deze regel toont de transformatie van Fisher's z terug naar Pearson's r ("pred") en het 95% betrouwbaarheidsinterval voor r ("ci.lb" en "ci.ub") voor het rapporteren van de meta-analyse.
+
+Hoewel de Q-statistiek en $I^2$ bewijs kunnen leveren voor heterogeniteit, geven ze geen informatie over welke studies van invloed kunnen zijn op de algehele heterogeniteit. Er is ook een reeks diagnoses beschikbaar om potentiële uitschieters en invloedrijke gevallen te identificeren.
+
+```{r}
+inf<- influence(res) 
+print(inf) 
+plot(inf)
+```
+
+De plot visualiseert de afgedrukte dataset. Omdat er geen studies met een sterretje in de afgedrukte dataset staan, voldeed geen enkele studie aan de criteria voor een invloedrijke studie.
+
+## Forest plot met `metafor`
+
+Nu visualiseren we de meta-analyse met een forest plot.
+
+```{r}
+forest(res, xlim=c(-1.6,1.6), atransf=transf.ztor,
+       at=transf.rtoz(c(-.4,-.2,0,.2,.4,.6)), digits=c(2,1), cex=.8)
+text(-1.6, 18, "Author(s), Year", pos=4, cex=.8)
+text( 1.6, 18, "Correlation [95% CI]", pos=2, cex=.8)
+```
+
+Of toch maar simpel
+
+```{r}
+forest(res)
+```
+
+We hebben een plot gemaakt met alle 12 onderzoeken. Belangrijk is dat de correlaties en 95% CI's voor elke studie worden gerapporteerd, evenals de samenvattende effectgrootte (de polygoon onderaan). De randen van de polygoon geven de 95%-betrouwbaarheidsgrens weer. Let op de verschillende groottes van elk vierkant - de studies met grotere vierkanten droegen meer bij aan de samenvattende effectgrootte.
+
+## Publication bias
+
+Dit is een begin, nog verder aanscherpen. Hier gaat het alleen maar om invloed van kleine studies
+
+## funnel plot
+
+```{r}
+funnel(res, xlab = "Correlation coefficient")
+```
+
+Testen voor bias
+
+```{r}
+regtest(res) # Eggers regressie test \# ranktest(res)
+```
+
+## Moderatoren analysis
+
+Laten we eens kijken naar moderatie-effect van `number_ACE`
+
+```{r}
+res.modage <- rma(yi, vi, mods = ~ number_ACEs, data=dat2) 
+res.modage
+```
+
+De gegevens onder de regel "Test van moderatoren" geven de benodigde informatie. Aangezien de p-waarde groter was dan 0,05, bewijst dit `number_Aces` de waargenomen correlatie niet significant heeft gematigd.
+
+Nu gebruiken we dezelfde variabele als factor Hier kijken we naar het modererende effect van het feit of er voor variabelen werd gecontroleerd.
+
+```{r}
+res.mes<- rma(yi, vi, mods = ~ factor(number_ACEs), data=dat2) 
+res.mes
+```
+
+# Moderator voor moderator leeftijd_ouder `age_parent`
+
+```{r}
+
+res.modq <- rma(yi, vi, mods = ~ age_parent, data=dat2) 
+res.modq
+
+```
+
+Aangezien de p-waarde groter was dan 0,05, levert dit bewijs dat de leeftijd_ouder de waargenomen correlatie niet significant beïnvloedde.
+
+# Moderator voor moderator leeftijd_kind `age_child`
+
+```{r}
+res.modq <- rma(yi, vi, mods = ~ age_child, data=dat2)
+res.modq
+```
+
+Aangezien de p-waarde groter was dan 0,05, levert dit bewijs dat de leeftijd_kind de waargenomen correlatie niet significant beïnvloedde.
