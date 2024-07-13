@@ -1,0 +1,370 @@
+---
+title: "AH-artikel"
+format: 
+  pdf: 
+    documentclass: article
+    geometry:
+      - a4paper
+      - top=30mm
+      - left=20mm
+    mainfont: Arial
+---
+
+(Screenshot1)
+
+# ‘De appel valt niet ver van de boom’
+
+## Een meta-analyse naar het verband tussen ingrijpende jeugdervaringen van ouders en de sensitiviteit naar hun kinderen toe met het aantal ingrijpende jeugdervaringen, de leeftijd van ouders en de leeftijd van het kind als moderatoren
+
+Masterscriptie Forensische Orthopedagogiek Graduate School of Child
+Development and Education Universiteit van Amsterdam\
+A.M. Hovestadt, 13941844\
+Eerste beoordelaar: dr. H. Jonkman\
+Tweede beoordelaar: dr. J. Gubbels\
+Amsterdam, juni, 2024
+
+# Abstract
+
+> Children of parents with adverse childhood experiences (ACEs) are more
+> likely to experience ACEs themselves through intergenerational
+> transmission. The purpose of this meta-analysis with a random-effect
+> model was to study the effect of parents with ACEs on their
+> sensitivity towards their children. Twelve studies with one effect
+> size each were included. There appeared to be heterogeneity between
+> studies ($Q (11) = 29.13, p = .002$), which allowed moderator
+> analyses. A significant middle size mean effect was found of parents'
+> ACEs on sensitivity towards their children
+> ($r = -.218, 95% CI = [-.293, -0.140]$). This result confirmed the
+> hypothesis that parental ACEs resulted in less sensitivity towards
+> their children. The number of ACEs, age of parents, nor age of
+> children were found to have significant moderation effects. Follow-up
+> research is needed to examine whether the results apply to both
+> fathers and mothers, and to see if the type of ACEs influences the
+> relationship.
+
+**Keywords**: adverse childhood experiences, sensitivity,
+intergenerational transmission, metaanalysis
+
+
+# Inleiding
+
+‘De appel valt niet ver van de boom’ is een bekend spreekwoord dat in
+het Algemeen Nederlands Woordenboek (z.d.) omschreven wordt als
+‘kinderen lijken vaak op hun ouders’. In sommige gevallen is dat
+positief bedoelt, maar er zijn ook gevallen waar dit niet zo is. Uit de
+laatste meting van kindermishandeling in Nederland bleek dat 96% van de
+mishandelde kinderen is mishandeld door een van de biologische ouders
+(Alink et al., 2018). Het meemaken van kindermishandeling is een van de
+ingrijpendste jeugdervaringen die je als kind kan meemaken. Kinderen die
+zelf mishandeld zijn door hun ouders hebben een grotere kans om hun
+eigen kinderen later te mishandelen. Uit onderzoek kwam naar voren dat
+40% van de ouders die zijn opgegroeid in een onveilige situatie, ook hun
+eigen kinderen in een onveilige situatie brengen (Eimers, 2021). Dit
+werd bevestigd in een ander onderzoek waarin werd aangetoond dat
+kinderen van moeders met een geschiedenis van mishandeling tijdens de
+kindertijd, meer dan twee keer zoveel risico liepen om
+kindermishandeling te ervaren (Bérubé et al., 2020). Wanneer het
+doorbreken van het patroon niet lukt bij ouders die ingrijpende
+jeugdervaringen hebben meegemaakt, is er sprake van intergenerationele
+overdracht van ingrijpende jeugdervaringen.\
+Ingrijpende jeugdervaringen, in het Engels Adverse Childhood Experiences
+(ACE’s) genoemd, zijn traumatische gebeurtenissen die plaatsvinden in de
+eerste achttien levensjaren (Felitti et al., 1998). In totaal zijn er
+tien soorten ingrijpende jeugdervaringen, onderverdeeld in drie
+categorieën: misbruik, verwaarlozing en disfunctioneren van het
+huishouden. Onder misbruik vallen: fysiek, emotioneel en seksueel
+misbruik. Onder de categorie verwaarlozing vallen zowel fysieke als
+emotionele verwaarlozing. Tot slot vallen onder de categorie
+disfunctioneren van het huishouden: echtscheiding van ouders, gezinslid
+met middelenmisbruik, gezinslid met psychische aandoening, opgesloten
+familielid en getuige zijn van huiselijk geweld (Boullier & Blair,
+2018).\
+Felitti en collega’s (1998) hebben baanbrekend onderzoek gedaan naar de
+impact van ingrijpende jeugdervaringen op toekomstige medische
+gezondheid en welzijn. Er werd in dit onderzoek een trapsgewijs verband
+gevonden tussen het aantal ingrijpende jeugdervaringen en een verhoogde
+kans op een gebrekkige gezondheid op latere leeftijd. Het meemaken van
+ingrijpende jeugdervaringen heeft schadelijke medische gevolgen en heeft
+een negatieve invloed op de sociaal-emotionele ontwikkeling (Felitti et
+al., 1998). Uit onderzoeken kwam naar voren dat ingrijpende
+jeugdervaringen gepaard kunnen gaan met verstoorde hechting,
+gedragsproblemen en depressie op latere leeftijd (Alto et al., 2021;
+Flagg et al., 2023).\
+Hoe vaker een kind ingrijpende jeugdervaringen heeft meegemaakt, hoe
+nadeliger de gevolgen voor zijn/haar toekomst (Felitti et al., 1998).
+Uit onderzoeken blijkt dat meer dan 50% van de mensen één ingrijpende
+jeugdervaring heeft meegemaakt en 10% van de mensen drie of meer
+ingrijpende jeugdervaringen (Felitti et al., 1998; Ziv et al., 2018). De
+blootstelling aan vier of meer ingrijpende jeugdervaringen is een
+hardnekkige risicofactor die gevolgen kan hebben in het verdere leven
+(Felitti et al., 1998).\
+Het meemaken van ingrijpende jeugdervaringen heeft niet alleen invloed
+op de medische gezondheid en de sociaal-emotionele ontwikkeling, maar
+ook op de kwaliteit van het ouderschap (Friesen et al., 2017; Olhaberry
+et al., 2022; Savage et al., 2019; Zvara et al., 2015). Er wordt al
+langere tijd gedacht dat de aard en kwaliteit van ouderschap
+intergenerationeel wordt overgedragen op de volgende generatie (Flagg et
+al., 2023). Deze gedachte wordt ondersteund door de levenslooptheorieën
+(Elder, 1981), hechtingstheorieën (Bowlby, 1969) en theorieën over
+sociaal leven (Patterson, 1998). Een kind dat een ingrijpende ervaring
+meemaakt, heeft een grotere kans om niet de vaardigheden te ontwikkelen
+om op een adequate manier met uitdagende situaties om te gaan. Dit kan
+er vervolgens voor zorgen dat wanneer het kind zelf opvoeder wordt, het
+niet de vaardigheden heeft om zijn/haar eigen kind op een adequate wijze
+op te voeden (Brodsky, 2016).\
+Een van die vaardigheden van het ouderschap is om als ouder emotioneel
+beschikbaar te zijn voor je kind. Een van de vier oudercomponenten die
+onder emotionele beschikbaarheid valt, is sensitief zijn (MacMillan et
+al., 2021). Een sensitieve ouder heeft het vermogen om de emotionele
+behoeften van zijn/haar kind te herkennen. Een onderdeel van
+sensitiviteit is responsiviteit, wat wil zeggen dat er adequaat wordt
+gereageerd op de emotionele behoefte van het kind (Clark et al., 2021).
+Volgens Ainsworth en collega’s (1974) is sensitiviteit een cruciaal
+onderdeel voor de hechting tussen ouder en kind. Sensitiviteit zorgt er
+namelijk voor dat een kind zich kan exploreren en terug kan vallen op
+ouders als het kind ondersteuning nodig heeft. Gegeven het belang van
+sensitiviteit van ouders is het belangrijk te begrijpen welke factoren
+hier een rol op kunnen spelen. Een van deze factoren is het effect van
+ingrijpende jeugdervaringen.\
+Hoewel in meerdere onderzoeken duidelijk werd dat de kwaliteit van
+ouderschap van generatie op generatie wordt doorgegeven, moet vermeld
+worden dat er ook sprake van intergenerationele discontinuïteit kan
+zijn, wat betekent dat deze overdracht niet plaatsvindt (Flagg et al.,
+2023; Rutter, 1998; Zvara et al., 2017). Over het onderliggende
+mechanisme dat ervoor zorgt of er wel of geen sprake is van
+intergenerationele overdracht van ingrijpende jeugdervaringen is nog
+weinig bekend (Narayan et al., 2021; Wattanatchariya et al., 2024). In
+sommige onderzoeken wordt dit mechanisme wel besproken, maar in de
+meeste gevallen is alleen mishandeling als ingrijpende jeugdervaring
+meegenomen en zijn de andere ingrijpende jeugdervaringen buiten
+beschouwing gelaten (Rowell & Neal‐Barnett, 2021). Daarnaast wordt
+sensitiviteit in de meeste onderzoeken niet als losstaande variabele
+onderzocht, maar als moderator of als onderdeel van hechting (Bérubé et
+al., 2024).\
+Samengevat ontbreekt er onderzoek naar het verband tussen alle tien de
+vormen van de ingrijpende jeugdervaringen van ouders op de sensitiviteit
+naar hun kinderen toe en ontbreekt er duidelijkheid over welke
+onderliggende mechanismen effect hebben op dit verband. Het meemaken van
+meerdere vormen van ingrijpende jeugdervaringen kan zorgen voor nadelige
+gevolgen zoals depressie, een verminderde kwaliteit van ouderschap en
+sociaal-emotionele ontwikkeling, maar het is niet duidelijk of hier
+vandaag de dag nog sprake van is. Het doel van dit onderzoek was om een
+duidelijker beeld te krijgen van het verband tussen ingrijpende
+jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe. In
+dit onderzoek werd de focus gelegd op de richting van het verband tussen
+deze variabelen, de sterkte van dit verband en de invloed van een
+drietal moderatoren op dit verband: het aantal ingrijpende
+jeugdervaringen, de leeftijd van ouders ten tijde van het onderzoek en
+de leeftijd van het kind ten tijde van het onderzoek. Alle soorten
+ingrijpende jeugdervaringen zijn meegenomen tijdens dit onderzoek. De
+eerste hypothese was dat er een negatief verband is tussen de
+onderzochte variabelen: ingrijpende jeugdervaringen bij ouders zorgen
+ervoor dat ze minder sensitief zijn naar hun kinderen toe. De tweede
+hypothese was dat hoe meer ingrijpende jeugdervaringen ouders hebben
+meegemaakt, hoe minder sensitief ouders zijn. De derde hypothese was dat
+jongere ouders minder sensitief zijn naar hun kinderen toe doordat zij
+minder tijd hebben gehad om de ingrijpende jeugdervaringen te verwerken.
+De vierde en laatste hypothese was dat ouders van jongere kinderen
+minder sensitief zijn vanwege het gebrek aan ervaring en omdat jongere
+kinderen een groter beroep doen op ouders.\
+## Methode    
+### Inclusie- en exclusiecriteria    
+Aan het begin van de
+meta-analyse zijn inclusie- en exclusiecriteria opgesteld waaraan de
+geïncludeerde studies moesten voldoen. Ten eerste werden er alleen
+primaire studies meegenomen die minimaal één ingrijpende jeugdervaring
+bij ouders als onafhankelijke variabele onderzochten en ouderschap als
+afhankelijke variabele onderzochten. Ten tweede werden alleen studies
+meegenomen van ouders met kinderen tussen de 0-18 jaar. Ten derde werden
+alleen peer reviewed studies meegenomen om de kwaliteit van de studies
+tot zekere hoogte te garanderen. Ten vierde werden alleen studies
+meegenomen die zijn gepubliceerd tussen 1998 en 2024, aangezien het
+Engelse begrip ACE’s pas in 1998 is bedacht (Felitti et al., 1998). Tot
+slot werden alleen Engelstalige studies meegenomen die zijn uitgevoerd
+in westerse landen. Exclusiecriteria waren meta-analyses,
+proefschriften, artikelen geschreven in een andere taal dan het Engels
+en studies die zijn uitgevoerd in niet-westerse landen.\
+
+## Zoekstrategie
+Er werd op systematische wijze gezocht naar gepaste studies in
+verschillende databases. De zoekstrings zijn opgesteld in samenwerking
+met een Specialist Wetenschappelijke Informatie Psychologie, Pedagogiek
+en Onderwijskunde werkzaam bij de Universiteit van Amsterdam. De
+zoekstrings werden gebruikt om informatie te vinden over ingrijpende
+jeugdervaringen, ouderschap en uitkomstmaten[^1]. Er werd gezocht in de
+databases PsychInfo, Medline en Web of Science Core Collection. In
+totaal werden 20.493 studies gevonden, waarvan in Zotero één databestand
+werd gemaakt (Versie 6.0.36; 2024). Vervolgens werden via het programma
+DedupEndNote (Lobbestael, 2023) de duplicaten verwijderd. De
+overgebleven artikelen werden verdeeld in vier datasets, waarbij elke
+dataset door twee beoordelaars werden gescreend op basis van hun
+abstract in ASReview (Versie 1.5; ASReview LAB developers, 2023).
+ASReview is een AI-screeningstool dat artikelen op volgorde van
+relevantie sorteert aan de hand van de beoordeling van de onderzoeker,
+waardoor tijd bespaard kan worden. Tijdens dit proces werd een stopregel
+gehanteerd van 100 opeenvolgende irrelevante artikelen. Bij deze eerste
+screening werd gelet of ingrijpende jeugdervaringen als afhankelijke
+variabele en ouderschap als onafhankelijke variabelen onderzocht werden.
+Na het opstellen van de onderzoeksvraag zijn de overgebleven artikelen
+opnieuw gescreend in ASReview waarbij ditmaal gelet werd of
+sensitiviteit als afhankelijke variabele was meegenomen. Van de
+overgebleven 233 artikelen werd de gehele tekst gescreend en werden de
+artikelen geselecteerd die voldeden aan alle inclusiecriteria en
+daardoor geschikt waren voor huidig onderzoek. Uiteindelijk zijn er
+twaalf studies meegenomen in de analyses (zie Figuur 1).
+
+Screenshot 2 (Figuur1: Stroomdiagram van zoekresultaten volgens de Preferred Reporting Items for Systematic Review and MetaAnalysis (PRISMA))
+
+
+[^1]: De gebruikte zoekstrings kunnen worden opgevraagd bij de
+    studiebegeleider.
+
+## Coderen
+Een codeerschema werd ontworpen in Microsoft Excel om relevante gegevens uit de artikelen te coderen. Om een helder beeld te krijgen van de ingrijpende jeugdervaringen die zijn meegenomen in de studies is er gecodeerd bij welke ouder(s) de ingrijpende jeugdervaringen gemeten werden (moeder en/of vader), welke typen ingrijpende jeugdervaringen werden gemeten en hoeveel ingrijpende jeugdervaringen (1-10) er gemeten werden. Daarnaast werd er verschillende informatie over de steekproefpopulatie gecodeerd: de steekproefgrootte, de gemiddelde leeftijd van de ouder (<20, 20-25, 26-30, 31-35, >35) en de gemiddelde leeftijd van het kind (<6 mnd, 7-12 mnd, 1-4 jaar, 5-8 jaar, 9-12 jaar, >12 jaar). Als algemeen onderzoeksaspect werd het publicatiejaar gecodeerd (2009-2024). Voor het verband tussen ingrijpende jeugdervaringen en sensitiviteit werd de effectgrootte, de richting van het verband en de mate van significantie gecodeerd (zie Bijlage 1). 
+
+## Berekenen effectgroottes
+Uit elk artikel werd de effectgrootte van het verband tussen sensitiviteit en ingrijpend jeugdtrauma gecodeerd. In eerste instantie werden alle effectgroottes gecodeerd aan de hand van de Pearson correlatiecoëfficiënt $r$. In artikelen waarin deze niet rechtstreeks te verkrijgen was, werd deze berekend op basis van de beschikbare gegevens middels een online effectgrootte calculator (Wilson, z.d.). De Pearson correlatiecoëfficiënt is niet normaal verdeeld en heeft minder gunstige wiskundige eigenschappen, waardoor er gekozen is om ten behoeve van de analyses de $r$-waarden om te zetten naar $Fisher’s z$ waarden (Harrer et al., 2021). Voor eenvoudige interpretatie werden de $Fisher’s z$ waarden weer omgerekend naar de Pearson correlatiecoëfficiënt (Lipsey & Wilson, 2001). Bij de interpretatie van de effectgroottes is gekozen voor de interpretatie van Funder en Ozer (2019). Zij vinden dat effectgroottes worden ondergewaardeerd en onjuist geïnterpreteerd worden. Ze interpreteren $r ≥ - .05$ als zeer klein effect, $r ≥ -.10$ als een klein effect, $r ≥ -.20$ een middelgroot effect, $r ≥ - .30$ als een groot effect en $r ≥ -.40$ als een zeer groot effect. Middels deze richtlijn worden effectgroottes niet meer genegeerd en adequaat geïnterpreteerd, waardoor ze informatiever zijn (Funder & Ozer, 2019). Een negatieve score gaf aan dat een hogere score op ingrijpende jeugdervaringen bij ouders samenhing met een lagere mate van sensitiviteit naar hun kind toe.
+
+## Statistische analyse    
+Negen studies rapporteerden één effectgrootte. Voor de overige drie studies is de belangrijkste effectgrootte gekozen, waarbij de belangrijkste gedefinieerd werd als de meest objectieve gemeten effectgrootte of de effectgrootte van het gemiddelde van de steekproefpopulatie. Doordat voor iedere studie één effectgrootte meegenomen is, hoefde er niet gekeken te worden naar de heterogeniteit binnen studies en was een drie-level meta-analyse niet noodzakelijk. Er is daarom gekozen om een metacorrelatie-analyse uit te voeren in een random-effect-model zodat er meer variantie werd gemodelleerd (Borenstein et al., 2010). IBM SPSS (Versie 28.0.1.0, IBM Corp, 2021) werd gebruikt om deze statistische analyses uit te voeren en R (Versie 4.3.3; R Core Team, 2024) werd gebruikt om deze analyses te controleren. Bij een p-waarde van < .05 werd het resultaat als statistisch significant gedefinieerd en er werd een 95%-betrouwbaarheidsinterval aangehouden. De heterogeniteit tussen studies werd berekend om zicht te krijgen op hoe betrouwbaar de effectgroottes zijn en op de varianties tussen de studieresultaten (Harrer et al., 2021). Om de heterogeniteit tussen de studies te berekenen werd de Q-statistiek gebruikt (Lipsey & Wilson, 2001). Om de betrouwbaarheid van uitspraken over de heterogeniteit te verhogen werd aanvullend de 𝐼2 statistiek gebruikt (Harrer et al., 2021). Om deze resultaten te visualiseren werd een forest plot van de uitkomsten gemaakt (zie Bijlage 2). Tot slot werden moderatoranalyses uitgevoerd om te onderzoeken of het verband tussen ingrijpende jeugdervaringen en sensitiviteit beïnvloed wordt door het aantal ingrijpende jeugdervaringen, de leeftijd van ouders of de leeftijd van het kind.
+
+## Publicatiebias 
+Voor huidig onderzoek is gebruik gemaakt van elektronische databases om studies te vinden die meegenomen konden worden in de meta-analyse. Er bestaat echter een kans dat niet alle relevante studies geselecteerd zijn, waardoor er sprake zou kunnen zijn van publicatiebias (Rosenthal, 1995). Dit betekent dat de meegenomen studies in dit onderzoek geen adequate weergave geven van het werkelijke verband tussen ingrijpende jeugdervaringen bij ouders en sensitiviteit naar hun kinderen toe. Mogelijke oorzaken zijn dat studies nog niet in een wetenschappelijk tijdschrift zijn gepubliceerd, het beoordelingsproces van het artikel nog lopend is, de resultaten niet significant waren of de resultaten overeenkwamen met resultaten van eerdere onderzoeken (Maruyama & Ryan, 2014). Er is door middel van een funnel plot (om symmetrie in de gegevens zichtbaar te maken), de Egger’s test (een kwantitatieve methode om die symmetrie te testen) en een trim-and-fill analyse (methode om resultaten vast te stellen op basis van grote studies die gecontroleerd worden voor kleine studies) bekeken of er mogelijk sprake is van publicatiebias (Egger et al., 1997).  
+## Resultaten 
+### Beschrijvende statistiek 
+In de meta-analyse zijn twaalf studies geïncludeerd, waarbij er één effectgrootte per studie is meegenomen die het verband tussen ingrijpende jeugdervaringen van ouders en de sensitiviteit naar hun kinderen toe beschreef. Zeven van de twaalf studies namen alle vormen van misbruik en verwaarlozing mee als ingrijpende jeugdervaring, twee studies namen alleen seksueel misbruik mee, één studie fysiek misbruik, één studie (echt)scheiding en één studie nam alle vormen van ingrijpende jeugdervaringen mee. Dit betekent dat er in vier van de twaalf studies gekeken werd naar één soort ingrijpende jeugdervaring, in zeven studies naar vijf soorten ingrijpende jeugdervaringen en in één studie naar alle tien de vormen van ingrijpende jeugdervaringen. Van de twaalf studies werd in tien studies alleen gekeken naar moeders en in twee studies naar zowel moeders als vaders. In vier van de twaalf studies waren de ouders tussen de 20 en 25 jaar, in twee studies tussen de 26 en 30 jaar, in vijf studies tussen de 31 en 35 jaar en in één studie werd de leeftijd van ouders niet gegeven. De kinderen waren in drie van de twaalf studies jonger dan 6 maanden, in twee studies tussen de 7 en 12 maanden, in zes studies tussen de 1 en 4 jaar en in één studie tussen de 5 en 8 jaar. De geïncludeerde studies werden gepubliceerd tussen 2009 en 2024 ($M = 2018,42, SD = 1,20$) en de steekproefgrootte varieerde tussen de 15 en 681 ($M = 184,83, SD = 51,37$). 
+
+## Overall effect en heterogeniteit 
+Op basis van de richtlijnen van Funder en Ozer (2019) is er een middelgroot overall effect geconstateerd tussen ingrijpende jeugdervaringen bij ouders en sensitiviteit naar hun kinderen ($r = -.218, 95% BI = [-0.293, -0.140], p = <.001$), wat duidt op een enig verklarend effect dat praktisch nut heeft, zelf op korte termijn. Dit resultaat wil zeggen dat in 95 van de 100 keer het meemaken van ingrijpende jeugdervaringen bij ouders zorgt voor een lagere sensitiviteit naar hun kinderen toe. Er bleek verder sprake te zijn van heterogeniteit tussen studies ($Q (11) = 29.13, p = .002$) en uit de $I^2$ test bleek dat 66,4% van de totale variantie de werkelijke verschillen in het populatiegemiddelde weergaf. Er is daarnaast gekeken, door middel van een reeks beschikbare diagnoses, naar de aanwezigheid van potentiële uitschieters. Hieruit bleek dat er geen enkele studie voldoet aan de criteria voor een invloedrijke studie (Venables & Smith, 2024).
+
+## Moderatoren effecten 
+De variantie in alle effectgroottes in de dataset bleek significant ($Q (11) = 29.13, p = .002$), wat betekent dat er een heterogene verdeling van effectgroottes is. Volgens deze resultaten kunnen variabelen als moderator getoetst worden voor het gemiddelde effect (Asscher et al., 2011). Middels moderatoranalyses werd onderzocht of het aantal ingrijpende jeugdervaringen, de leeftijd van ouders of de leeftijd van het kind de sterkte van het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit op hun kinderen beïnvloeden (zie Tabel 1). Het aantal ingrijpende jeugdervaringen bleek geen significant effect te hebben op het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($Q_{between} (2,9) = .017, p = .991$). Dit betekent dat het niet uitmaakt of een ouder één, vijf of tien ingrijpende jeugdervaring(en) heeft meegemaakt voor het verband tussen ingrijpende jeugdervaringen en de sensitiviteit naar hun kinderen toe, alhoewel dit resultaat niet significant is. Daarnaast bleek de leeftijd van ouders geen significant effect te hebben op het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($Q_{between} (2,8) = .603, p = .740$). Voor ouders tussen de 20 en 25 en voor ouders tussen de 
+26 en 30 geldt dat het verband tussen ingrijpende jeugdervaringen en sensitiviteit lager is dan voor ouders tussen de 31 en 35, maar hier bleek alleen het resultaat voor laatstgenoemde groep significant. Tot slot bleek de leeftijd van het kind ook geen significant effect te hebben op het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($Q_{between} (3,8) = .002, p = .999$). Het verband tussen ingrijpende jeugdtrauma’s en sensitiviteit leek ongeveer gelijk voor een kind tussen de 0 en 8 jaar, maar deze resultaten bleken niet significant.  
+Table 1
+
+## Publicatiebias 
+Middels een funnel plot en een Egger’s regressie toets werd nagegaan of er sprake is van publicatiebias. Uit de funnel plot (zie Bijlage 3) bleek dat er geen sprake is van asymmetrie en er geen aanwijzingen zijn voor publicatiebias. De Egger’s regressie toets ($\beta= -.117, p = .230$) en de funnel plot toets ($z = -1.233, p = .061$) bevestigden dit, aangezien de p-waarden niet significant waren. Een trim-and-fill analyse was derhalve hier niet noodzakelijk.
+
+# Discussie
+In de huidige meta-analyse werd het verband onderzocht tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe. Het doel was om inzicht te krijgen in de richting en sterkte van dit verband en om te kijken of het aantal ingrijpende jeugdervaringen, de leeftijd van ouders en de leeftijd van het kind effect hadden op dit verband. Er is, volgens de richtlijnen van Funder en Ozer (2019), een middelgroot overall effect gevonden tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($r = -.218, 95% BI = [-0.293, -0.140], p = <.001$). Dit betekent dat ouders die ingrijpende jeugdervaringen hebben meegemaakt minder sensitief zijn naar hun kinderen toe dan ouders zonder ingrijpende jeugdervaringen. Dit resultaat komt overeen met de eerste hypothese. Uit de moderatoranalyses bleek vervolgens dat geen van de genoemde moderatoren een significant effect had op het verband tussen ouders die ingrijpende jeugdervaringen hebben meegemaakt en de sensitiviteit naar hun kinderen toe. Uit eerder onderzoek (Felitti et al., 1998) kwam naar voren dat bij het meemaken van meerdere vormen ingrijpende jeugdervaringen de nadelige gevolgen voor de toekomst groter zouden zijn. In huidig onderzoek kwam dit, tegen de verwachtingen in, niet naar voren. Dit zou kunnen doordat in sommige onderzoeken de categorie vier of meer ingrijpende jeugdervaringen werd gehanteerd in plaats van losse categorieën voor het aantal ingrijpende jeugdervaringen, waardoor er niet duidelijk was hoeveel ingrijpende jeugdervaringen er daadwerkelijk zijn meegenomen (Ziv et al., 2018). De derde hypothese was dat jongere ouders die ingrijpende jeugdervaringen hebben meegemaakt minder sensitief zouden zijn, maar dit kwam niet uit de resultaten naar voren. Dit kan mogelijk verklaard worden doordat de leeftijd van ouders geen voorspeller is, maar er kan ook een andere verklaring voor zijn. Uit onderzoek bleek dat de leeftijd van ouders geen effect had op het verband tussen het meemaken van emotioneel misbruik als ingrijpende jeugdervaringen en de opvoedkwaliteit (Bert et al., 2009). Uit datzelfde onderzoek bleek dat emotioneel misbruik voor ouders rond de 35 een minder grote impact had op de kwaliteit van ouderschap dan fysiek misbruik, terwijl dit niet bleek te gelden voor tienermoeders. Het kan zijn dat de leeftijd van ouders in combinatie met het soort ingrijpende jeugdervaring dat zij hebben meegemaakt wel effect zou hebben op het verband. Tot slot werd verwacht dat ouders met ingrijpende jeugdervaringen van jongere kinderen minder sensitief zouden zijn, maar dit werd niet bevestigd door de resultaten. Een verklaring zou kunnen zijn dat ouders meer moeite krijgen met sensitiviteit naar hun kind toe als het kind meer autonomie en controle krijgt over zijn leven, waardoor het lastiger is om sensitief te zijn als ze ouder worden (Fuchs et al., 2015). In de geïncludeerde studies zijn alleen kinderen tot en met acht jaar meegenomen. Het zou kunnen dat er wel een effect gevonden wordt als er in de geïncludeerde studies kinderen tot en met achttien jaar worden meegenomen, aangezien de autonomie steeds meer toeneemt gedurende een kind ouder wordt.      
+### Sterke punten en beperkingen 
+Een sterk punt van de huidige meta-analyse is dat er een uitgebreide zoekstring is gebruikt voor het verzamelen van relevante studies. Een bestaande zoekstring is, in samenwerking met een Specialist Wetenschappelijke Informatie Psychologie, Pedagogiek en Onderwijskunde, aangepast en aangevuld op de huidige meta-analyse. Hierdoor is de kans verkleind dat relevante artikelen niet zijn opgenomen. Een tweede sterk punt is dat er geen publicatiebias is vastgesteld, waardoor er vanuit mag worden gegaan dat de resultaten over het werkelijke verband tussen ingrijpende jeugdervaringen en sensitiviteit een adequate weergave zijn (Rosenthal, 1995). Ten derde is een sterk punt dat de artikelen en de effectgroottes van de meeste geïncludeerde studies door meerdere onderzoekers zijn gecontroleerd, waardoor de betrouwbaarheid van dit onderzoek vergroot werd (Maruyama & Ryan, 2014). Tot slot is een sterk punt dat de meta-analyse heeft geleid tot een grotere statistische power vergeleken met elk afzonderlijke studie (Maruyama & Ryan, 2014).  
+Er zijn een aantal beperkingen aan het huidig onderzoek te benoemen. Een eerste beperking is dat er maar twee studies zijn geïncludeerd waarbij niet alleen de moeder, maar ook de vader werd onderzocht. De huidige resultaten zijn daarmee voornamelijk gebaseerd op moeders. De resultaten zullen met enige voorzichtigheid geïnterpreteerd moeten worden, aangezien er een kans bestaat dat de resultaten niet generaliseerbaar zijn naar alle ouders. Een tweede beperking is dat er maar bij één studie gekeken werd naar alle tien de vormen van ingrijpende jeugdervaringen. In de meeste studies werden alleen misbruik en verwaarlozing meegenomen en zijn de ingrijpende jeugdervaringen die vallen in de categorie ‘disfunctioneren van het huishouden’ niet meegenomen. Ook daarom zullen de resultaten met enige voorzichtigheid geïnterpreteerd moeten worden, aangezien er een kans bestaat dat de huidige resultaten niet gelden voor alle vormen van ingrijpende jeugdervaringen. Tot slot is er bij de geïncludeerde studies gebruik gemaakt van zelfrapportage vragenlijsten om de ingrijpende jeugdervaringen van ouders te meten. Bij zelfrapportage vragenlijsten kan sprake zijn van responsbias doordat er ruimte is voor eigen interpretatie. Daarnaast wordt er bij deze vragenlijsten gevraagd naar gebeurtenissen uit de jeugd waardoor er sprake kan zijn van geheugenfouten (Maruyama & Ryan, 2014). 
+
+## Aanbevelingen voor wetenschap en praktijk    
+Ten eerste is het van belang dat er meer onderzoeken worden uitgevoerd waarin zowel vaders als moeders worden meegenomen, zodat er onderzocht kan worden of er verschil zit tussen vaders en moeders die ingrijpende jeugdervaringen hebben meegemaakt en de impact daarvan op de sensitiviteit naar hun kinderen toe. Als moeders meer tijd brengen met hun kinderen zorgt dat volgens de roltheorie ervoor dat zij een accurater begrip hebben van hun signalen (Hallers-Haalboom et al., 2014). De gender-rollen theorie van Bem (1974) stelt dat de verschillende kenmerken van vrouwen en mannen kunnen leiden tot een verschil in opvoeding. Vrouwen zijn competenter in het decoderen van sociale- en emotionele nonverbale communicatie en daardoor sensitiever naar hun kinderen toe (Hall & Matsumoto, 2004). Vader zijn steeds meer betrokken bij de opvoeding, waardoor het van meerwaarde zou zijn om te kijken of het verschil tussen mannen en vrouwen in de sensitiviteit nog altijd aanwezig is. Ten tweede is er ook meer onderzoek nodig naar alle vormen van ingrijpende jeugdervaringen. Uit eerder onderzoek blijkt dat het soort ingrijpende jeugdervaring uitmaakt voor de impact op de kwaliteit van het ouderschap (Bert et al., 2009). Als er meer onderzoek wordt verricht naar de verschillende soorten ingrijpende jeugdervaringen, kan er meer gezegd worden over de grootte van de impact van deze verschillende jeugdervaringen. Er kan dan ook onderzocht worden of het meemaken van meerdere ingrijpende jeugdervaringen of het meemaken van een bepaalde soort ingrijpende jeugdervaring een (grotere) voorspeller is voor het verband tussen ingrijpende jeugdervaringen bij ouders en sensitiviteit naar hun kinderen toe. Ten derde is het van belang dat er meer onderzoeken gedaan worden naar ouders van kinderen tussen de acht en achttien jaar zodat er meer gezegd kan worden over het verschil tussen jonge en oudere kinderen. Ten slot is het van belang dat er meer onderzoek wordt verricht naar de emotionele beschikbaarheid, waarvan in de inleiding al was vastgesteld dat sensitiviteit daar slechts een onderdeel van is. In eerdere studies is doorgaans alleen sensitiviteit gemeten, waardoor in huidig onderzoek te weinig informatie was om emotionele beschikbaarheid als variabele te onderzoeken. Dat vraagt in de toekomst meer aandacht. 
+
+## Conclusie 
+Samenvattend, het meemaken van ingrijpende jeugdervaringen heeft een middelgrote negatieve bijdrage op de sensitiviteit van ouders naar hun kinderen toe. Het aantal ingrijpende jeugdervaringen, de leeftijd van ouders en de leeftijd van het kind blijken het verband tussen ingrijpende jeugdervaringen van ouders en de sensitiviteit naar hun kinderen toe niet significant te beïnvloeden. Vervolgonderzoek is nodig om te onderzoeken of deze uitkomsten voor zowel vaders als moeders gelden en om te bekijken of het soort ingrijpende jeugdervaring effect heeft op het verband.  
+ 
+# Literatuur
+Ainsworth, M. D. S., Bell, S. M., & Stayton, D. J. (1974). Infant-mother attachment and social development: Socialisation as a product of reciprocal responsiveness to signals. 
+In M. P. M. Richards (Ed.), *The introduction of the child into a social world* (pp. 9– 135). London: Cambridge University Press. 
+
+Algemeen Nederlands Woordenboek (z.d.). De appel valt niet ver van de boom. In ANW. Geraadpleegd op 8 maart 2024 van [here](https://anw.ivdnt.org/)
+
+Alink, L., Prevoo, M., van Berkel, S., Linting, M., Klein Velderman, M. & Pannebakker, F. 
+(2018). *NPM 2017: Nationale Prevalentiestudie Mishandeling van Kinderen en Jeugdigen*. Leiden: Universiteit Leiden/TNO
+
+* Alto, M. E., Warmingham, J. M., Handley, E. D., Rogosch, F., Cicchetti, D., & Toth, S. L. (2020). Developmental pathways from maternal history of childhood maltreatment and maternal depression to toddler attachment and early childhood behavioral outcomes. *Attachment & Human Development*, 23(3), 328–349. 
+[here](https://doi.org/10.1080/14616734.2020.1734642)
+
+ASReview LAB developers. (2023). *ASReview LAB Software Documentation (version 1.5).* 
+Zenodo.[here](https://doi.org/10.5281/zenodo.10066693)
+
+Asscher, J. J., Van Vugt, E. S., Stams, G. J. J., Deković, M., Eichelsheim, V. I., & Yousfi, S. (2011). The relationship between juvenile psychopathic traits, delinquency and 
+(violent) recidivism: A meta-analysis. *Journal Of Child Psychology And Psychiatry And Allied Disciplines*, 52(11), 1134–1143. [here](https://doi.org/10.1111/j.1469-
+7610.2011.02412.x)
+
+Bem, S. L. (1974). The measurement of psychological androgyny. *Journal Of Consulting And Clinical Psychology*, 42(2), 155–162. [here](https://doi.org/10.1037/h0036215) 
+  
+* Bert, S. C., Guner, B. M., & Lanzi, R. G. (2009). The Influence of Maternal History of Abuse on Parenting Knowledge and Behavior. *Family Relations*, 58(2), 176–187. [here]
+(https://doi.org/10.1111/j.1741-3729.2008.00545.x)
+
+* Bérubé, A., Blais, C., Fournier, A., Turgeon, J., Forget, H., Coutu, S., & Dubeau, D. (2020). Childhood maltreatment moderates the relationship between emotion recognition and maternal sensitive behaviors. Child Abuse & Neglect, 102, 104432. 
+https://doi.org/10.1016/j.chiabu.2020.104432 
+*Bérubé, A., Pearson, J., Blais, C., & Forget, H. (2024). Stress and emotion recognition predict the relationship between a history of maltreatment and sensitive parenting behaviors: A moderated-moderation. Development And Psychopathology, 1–11. 
+https://doi.org/10.1017/s095457942300158x 
+Borenstein, M., Hedges, L. V., Higgins, J. P., & Rothstein, H. R. (2010). A basic introduction to fixed-effect and random-effects models for meta-analysis. Research Synthesis 
+Methods, 1(2), 97–111. https://doi.org/10.1002/jrsm.12 
+Boullier, M., & Blair, M. (2018). Adverse childhood experiences. Paediatrics And Child 
+Health, 28(3), 132–137. https://doi.org/10.1016/j.paed.2017.12.008 
+Bowlby, J. (1969). Attachment and loss. Attachment (Vol. 1). New York: Basic Books. 
+Brodsky, B. S. (2016). Early childhood environment and genetic interactions: The diathesis for suicidal behavior. Current Psychiatry Reports, 18(9), 86. 
+Clark, E., Jiao, Y., Sandoval, K., & Biringen, Z. (2021). Neurobiological Implications of 
+Parent–Child Emotional Availability: A Review. Brain Sciences, 11(8), 1016. https://doi.org/10.3390/brainsci11081016 
+Egger, M., Smith, G. D., Schneider, M., & Minder, C. E. (1997). Bias in meta-analysis detected by a simple, graphical test. British Medical Journal, 315(7109), 629–634. 
+https://doi.org/10.1136/bmj.315.7109.629 
+Eimers, D. (2021). Intergenerationele overdracht doorbreken. Augeo Magazine, 25. 
+https://www.augeomagazine.nl/aandacht-voor-ouderschap-augeo-magazine-
+25/achtergrond-intergenerationele-overdracht-doorbreken 
+Elder, G. (1981). History and the life course. In D. Bertaux (Ed.), Biog-raphy and society: 
+The life history approach in the social sciences (pp.77–115). Beverly Hills, CA: Sage. 
+Felitti, V. J., Anda, R. F., Nordenberg, D., Williamson, D. F., Spitz, A. M., Edwards, V. J., 
+Koss, M. P., & Marks, J. S. (1998). Relationship of Childhood Abuse and Household 
+Dysfunction to Many of the Leading Causes of Death in Adults. American Journal Of Preventive Medicine, 14(4), 245–258. https://doi.org/10.1016/s0749-3797(98)00017-8 
+*Flagg, A. M., Lin, B., Crnic, K. A., Gonzales, N. A., & Luecken, L. J. (2023). 
+Intergenerational Consequences of Maternal Childhood Maltreatment on Infant Health 
+Concerns. Maternal And Child Health Journal, 27(11), 1981–1989. 
+https://doi.org/10.1007/s10995-023-03717-1 
+*Friesen, M. D., Horwood, L. J., Fergusson, D. M., & Woodward, L. J. (2017). Exposure to parental separation in childhood and later parenting quality as an adult: evidence from a 30‐year longitudinal study. Journal Of Child Psychology And Psychiatry And Allied 
+Disciplines, 58(1), 30–37. https://doi.org/10.1111/jcpp.12610 
+*Fuchs, A., Möhler, E., Resch, F., & Kaess, M. (2015). Impact of a maternal history of childhood abuse on the development of mother–infant interaction during the first year of life. Child Abuse & Neglect, 48, 179–189. 
+https://doi.org/10.1016/j.chiabu.2015.05.023 
+Funder, D. C., & Ozer, D. J. (2019). Evaluating Effect Size in Psychological Research: Sense and Nonsense. Advances in Methods And Practices in Psychological Science, 2(2), 
+156–168. https://doi.org/10.1177/2515245919847202 
+Hall, J. A., & Matsumoto, D. (2004). Gender Differences in Judgments of Multiple Emotions 
+From Facial Expressions. Emotion, 4(2), 201–206. https://doi.org/10.1037/1528-
+3542.4.2.201 
+Hallers-Haalboom, E. T., Mesman, J., Groeneveld, M. G., Endendijk, J. J., Van Berkel, S. R., Van Der Pol, L. D., & Bakermans-Kranenburg, M. J. (2014). Mothers, fathers, sons and daughters: Parental sensitivity in families with two children. Journal Of Family 
+Psychology, 28(2), 138–147. https://doi.org/10.1037/a0036004 
+Harrer, M., Cuijpers, P., Furukawa, T. A., & Ebert, D. D. (2021). Doing Meta-Analysis with 
+R. https://doi.org/10.1201/9781003107347 
+IBM Corp. Released 2021. IBM SPSS Statistics for Windows, Version 28.0. Armonk, NY: 
+IBM Corp 
+Langevin, R., Marshall, C., & Kingsland, E. (2019). Intergenerational Cycles of Maltreatment: A Scoping Review of Psychosocial Risk and Protective Factors. 
+Trauma, Violence & Abuse, 22(4), 672–688. https://doi.org/10.1177/1524838019870917 
+Lipsey, M.W., & Wilson, D.B. (2001). Practical meta-analysis (vol. 49). Thousand Oaks, 
+CA: Sage 
+Lobbestael, G. (2023). DedupEndNote (Version 1.0.0) [Computer software]. Geraadpleegd van https://github.com/globbestael/DedupEndNote 
+*MacMillan, K. K., Lewis, A. J., Watson, S. J., Jansen, B., & Galbally, M. (2021). Maternal trauma and emotional availability in early mother-infant interaction: findings from the 
+Mercy Pregnancy and Emotional Well-being Study (MPEWS) cohort. Attachment & 
+Human Development, 23(6), 853–875. 
+https://doi.org/10.1080/14616734.2020.1790116 
+Maruyama, G., & Ryan, C. S. (2014). Research methods in social relations. John Wiley & 
+Sons. 
+Narayan, A. J., Lieberman, A. F., & Masten, A. S. (2021). Intergenerational transmission and prevention of adverse childhood experiences (ACEs). Clinical Psychology Review, 85, 
+101997. https://doi.org/10.1016/j.cpr.2021.101997 
+*Olhaberry, M. P., León, M. J., Coo, S., Barrientos, M., & Pérez, J. C. (2021). An explanatory model of parental sensitivity in the mother–father–infant triad. Infant Mental Health 
+Journal, 43(5), 714–729. https://doi.org/10.1002/imhj.22007 
+Page MJ, McKenzie JE, Bossuyt PM, Boutron I, Hoffmann TC, Mulrow CD, et al. The 
+PRISMA 2020 statement: an updated guideline for reporting systematic reviews. 
+British Medical Journal 2021;372:n71. doi: 10.1136/bmj.n71 
+Patterson, G. (1998). Continuities—A search for causal mechanisms: Comment on the special section. Developmental Psychology, 34,1263–1268. 
+Publication manual of the American Psychological Association (7th ed.). (2020). In American 
+Psychological Association eBooks. https://doi.org/10.1037/0000165-000 
+R Core Team (2024). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/ 
+Rosenthal, R. Writing meta-analytic reviews. Psychological.Bulletin. 1995, 118, 183–192. 
+Rowell, T., & Neal‐Barnett, A. (2021). A Systematic Review of the Effect of Parental 
+Adverse Childhood Experiences on Parenting and Child Psychopathology. Journal Of 
+Child & Adolescent Trauma, 15(1), 167–180. https://doi.org/10.1007/s40653-021-
+00400-x 
+Rutter, M. (1998). Some research considerations on intergenerational continuities and discontinuities: Comment on the special section. Developmental Psychology, 34,1269–
+1273 
+Savage, L., Tarabulsy, G. M., Pearson, J., Collin‐Vézina, D., & Gagné, L. (2019). Maternal history of childhood maltreatment and later parenting behavior: A meta-analysis. 
+Development And Psychopathology, 31(1), 9–21. 
+https://doi.org/10.1017/s0954579418001542 
+Venables, W. N., & Smith, D. M. (2024). An introduction to R: Notes on R: A Programming environment for data analysis and graphics Version 4.4.0 (2024-04-24). https://cran.rproject.org/doc/manuals/R-intro.pdf 
+Wattanatchariya, K., Narkpongphun, A., & Kawilapat, S. (2024). The relationship between parental adverse childhood experiences and parenting behaviors. Acta Psychologica, 
+243, 104166. https://doi.org/10.1016/j.actpsy.2024.104166 
+Wilson, D. B., Ph.D. (z.d.). Practical Meta-Analysis Effect Size Calculator [Online calculator]. Retrieved 17 april, 2024 from https://www.campbellcollaboration.org/research-resources/effect-size-calculator.html 
+*Ziv, Y., Umphlet, K. L. C., Olarte, S., & Venza, J. (2018). Early childhood trauma in highrisk families: associations with caregiver emotional availability and insightfulness, and children’s social information processing and social behavior. Attachment & Human 
+Development, 20(3), 309–332. https://doi.org/10.1080/14616734.2018.1446738 
+Zotero (Version 6.0.36) [Computer software]. (2024) Geraadpleegd van https://www.zotero.org/  
+*Zvara, B. J., Meltzer‐Brody, S., Mills‐Koonce, W. R., & Cox, M. (2017). Maternal 
+Childhood Sexual Trauma and Early Parenting: Prenatal and Postnatal Associations. 
+Infant And Child Development, 26(3). https://doi.org/10.1002/icd.1991 
+*Zvara, B. J., Mills-Koonce, W. R., Carmody, K. A., & Cox, M. (2015). Childhood sexual trauma and subsequent parenting beliefs and behaviors. Child Abuse & Neglect, 44, 
+87–97. https://doi.org/10.1016/j.chiabu.2015.01.012 
+
+
