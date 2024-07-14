@@ -13,10 +13,11 @@ format:
       - top=30mm
       - left=20mm
     mainfont: Times New Roman
-    body-header: INGRIJPENDE JEUGDERVARINGEN VAN OUDERS EN DE SENSITIVITEIT NAAR HUN KINDEREN TOE
+    
 ---
 
 ![](Screenshot1.png)
+{{< pagebreak >}}
 
 # Abstract
 
@@ -54,7 +55,7 @@ Er werd op systematische wijze gezocht naar gepaste studies in verschillende dat
 
 [^1]: De gebruikte zoekstrings kunnen worden opgevraagd bij de studiebegeleider.
 
-![**Figuur1**: Stroomdiagram van zoekresultaten volgens de Preferred Reporting Items for Systematic Review and MetaAnalysis (PRISMA)](Screenshot2.png)
+![Stroomdiagram van zoekresultaten volgens de Preferred Reporting Items for Systematic Review and MetaAnalysis (PRISMA)](Screenshot2.png)
 
 ## Coderen     
 Een codeerschema werd ontworpen in Microsoft Excel om relevante gegevens uit de artikelen te coderen. Om een helder beeld te krijgen van de ingrijpende jeugdervaringen die zijn meegenomen in de studies is er gecodeerd bij welke ouder(s) de ingrijpende jeugdervaringen gemeten werden (moeder en/of vader), welke typen ingrijpende jeugdervaringen werden gemeten en hoeveel ingrijpende jeugdervaringen (1-10) er gemeten werden. Daarnaast werd er verschillende informatie over de steekproefpopulatie gecodeerd: de steekproefgrootte, de gemiddelde leeftijd van de ouder (\<20, 20-25, 26-30, 31-35, \>35) en de gemiddelde leeftijd van het kind (\<6 mnd, 7-12 mnd, 1-4 jaar, 5-8 jaar, 9-12 jaar, \>12 jaar). Als algemeen onderzoeksaspect werd het publicatiejaar gecodeerd (2009-2024). Voor het verband tussen ingrijpende jeugdervaringen en sensitiviteit werd de effectgrootte, de richting van het verband en de mate van significantie gecodeerd (zie Bijlage 1).
@@ -79,7 +80,7 @@ Op basis van de richtlijnen van Funder en Ozer (2019) is er een middelgroot over
 ## Moderatoren effecten    
 De variantie in alle effectgroottes in de dataset bleek significant ($Q (11) = 29.13, p = .002$), wat betekent dat er een heterogene verdeling van effectgroottes is. Volgens deze resultaten kunnen variabelen als moderator getoetst worden voor het gemiddelde effect (Asscher et al., 2011). Middels moderatoranalyses werd onderzocht of het aantal ingrijpende jeugdervaringen, de leeftijd van ouders of de leeftijd van het kind de sterkte van het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit op hun kinderen beïnvloeden (zie Tabel 1). Het aantal ingrijpende jeugdervaringen bleek geen significant effect te hebben op het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($Q_{between} (2,9) = .017, p = .991$). Dit betekent dat het niet uitmaakt of een ouder één, vijf of tien ingrijpende jeugdervaring(en) heeft meegemaakt voor het verband tussen ingrijpende jeugdervaringen en de sensitiviteit naar hun kinderen toe, alhoewel dit resultaat niet significant is. Daarnaast bleek de leeftijd van ouders geen significant effect te hebben op het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($Q_{between} (2,8) = .603, p = .740$). Voor ouders tussen de 20 en 25 en voor ouders tussen de 26 en 30 geldt dat het verband tussen ingrijpende jeugdervaringen en sensitiviteit lager is dan voor ouders tussen de 31 en 35, maar hier bleek alleen het resultaat voor laatstgenoemde groep significant. Tot slot bleek de leeftijd van het kind ook geen significant effect te hebben op het verband tussen ingrijpende jeugdervaringen bij ouders en de sensitiviteit naar hun kinderen toe ($Q_{between} (3,8) = .002, p = .999$). Het verband tussen ingrijpende jeugdtrauma’s en sensitiviteit leek ongeveer gelijk voor een kind tussen de 0 en 8 jaar, maar deze resultaten bleken niet significant.\
 
-![**Tabel 1**: Resultaten van de moderatorenanalyses](Screenshot3.png)
+![Resultaten van de moderatorenanalyses](Screenshot3.png)
 
 ## Publicatiebias     
 Middels een funnel plot en een Egger’s regressie toets werd nagegaan of er sprake is van publicatiebias. Uit de funnel plot (zie Bijlage 3) bleek dat er geen sprake is van asymmetrie en er geen aanwijzingen zijn voor publicatiebias. De Egger’s regressie toets ($\beta= -.117, p = .230$) en de funnel plot toets ($z = -1.233, p = .061$) bevestigden dit, aangezien de p-waarden niet significant waren. Een trim-and-fill analyse was derhalve hier niet noodzakelijk.
