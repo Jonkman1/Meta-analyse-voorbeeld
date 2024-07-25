@@ -16,7 +16,7 @@ reference-location: margin
 citation-location: margin
 ---
 
-![](Screenshot1.png) {{< pagebreak >}}
+![](img/Screenshot1.png) {{< pagebreak >}}
 
 # Abstract
 
@@ -75,7 +75,7 @@ Er werd op systematische wijze gezocht naar gepaste studies in verschillende dat
 
 [^8]: De gebruikte zoekstrings kunnen worden opgevraagd bij de studiebegeleider.
 
-![Stroomdiagram van zoekresultaten volgens de Preferred Reporting Items for Systematic Review and MetaAnalysis (PRISMA)](Screenshot2.png)
+![Stroomdiagram van zoekresultaten volgens de Preferred Reporting Items for Systematic Review and MetaAnalysis (PRISMA)](img/Screenshot2.png)
 
 ## Coderen
 
@@ -121,7 +121,7 @@ De variantie in alle effectgroottes in de dataset bleek significant ($Q (11) = 2
 
 [^15]: Over de invloed van bepaalde variabelen op het effect.
 
-![Resultaten van de moderatorenanalyses](Screenshot3.png)
+![Resultaten van de moderatorenanalyses](img/Screenshot3.png)
 
 ## Publicatiebias
 
